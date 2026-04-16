@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Banner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="./main.js"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+
+  <main class="max-w-3xl mx-auto p-6">
+    <div class="bg-white rounded-2xl shadow-lg p-8 mt-10">
+      <h1 class="text-3xl font-bold mb-3">Cookie Banner Practice</h1>
+      <p class="text-slate-600">
+        This page is used to practice cookies in JavaScript.
+      </p>
+
+      <p id="userChoice" class="mt-6 text-lg font-medium text-slate-700"></p>
+    </div>
+  </main>
+
+  <!-- Cookie banner -->
+  <div
+    id="cookieBanner"
+    class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md bg-slate-900 text-white rounded-2xl shadow-xl p-5"
+  >
+    <p class="text-base mb-4">Denne side bruger cookies</p>
+
+    <div class="flex gap-3">
+      <button
+        id="acceptBtn"
+        class="rounded-xl bg-emerald-500 px-4 py-2 font-medium hover:bg-emerald-600 transition"
+      >
+        Accepter
+      </button>
+
+      <button
+        id="rejectBtn"
+        class="rounded-xl bg-rose-500 px-4 py-2 font-medium hover:bg-rose-600 transition"
+      >
+        Afvis
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
