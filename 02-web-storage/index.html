@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storage Notes App</title>
+
+  <!-- Tailwind for simple styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Connect JavaScript -->
+  <script type="module" src="./main.js"></script>
+</head>
+<body id="body" class="min-h-screen bg-slate-100 text-slate-800 transition-colors duration-300">
+  <main class="max-w-4xl mx-auto p-6">
+    <div id="card" class="bg-white rounded-2xl shadow-lg p-8 transition-colors duration-300">
+      
+      <!-- Header -->
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+        <div>
+          <h1 class="text-3xl font-bold">Storage Notes App</h1>
+          <p id="subtitle" class="text-slate-500 mt-1">
+            Session drafts, local saved notes, and theme memory
+          </p>
+        </div>
+
+        <!-- Theme toggle button -->
+        <button
+          id="themeBtn"
+          class="rounded-xl bg-slate-800 text-white px-4 py-3 hover:bg-slate-900 transition"
+        >
+          🌙 Dark Mode
+        </button>
+      </div>
+
+      <!-- Input area -->
+      <div class="space-y-4 mb-8">
+        <label for="noteInput" class="block font-medium">Write a note</label>
+
+        <textarea
+          id="noteInput"
+          rows="4"
+          placeholder="Write something here..."
+          class="w-full rounded-xl border border-slate-300 px-4 py-3 bg-white text-slate-800 outline-none focus:ring-2 focus:ring-sky-400 transition-colors duration-300"
+        ></textarea>
+
+        <!-- Action buttons -->
+        <div class="flex flex-wrap gap-3">
+          <button
+            id="addSessionBtn"
+            class="rounded-xl bg-amber-500 text-white px-4 py-3 hover:bg-amber-600 transition"
+          >
+            Add to Session
+          </button>
+
+          <button
+            id="saveLocalBtn"
+            class="rounded-xl bg-sky-500 text-white px-4 py-3 hover:bg-sky-600 transition"
+          >
+            Save Selected to Local
+          </button>
+
+          <button
+            id="deleteSessionBtn"
+            class="rounded-xl bg-rose-500 text-white px-4 py-3 hover:bg-rose-600 transition"
+          >
+            Delete Session Item
+          </button>
+
+          <button
+            id="clearSessionBtn"
+            class="rounded-xl bg-purple-500 text-white px-4 py-3 hover:bg-purple-600 transition"
+          >
+            Clear Session
+          </button>
+
+          <button
+            id="deleteLocalBtn"
+            class="rounded-xl bg-slate-700 text-white px-4 py-3 hover:bg-slate-800 transition"
+          >
+            Delete Local Item
+          </button>
+        </div>
+
+        <!-- Status message -->
+        <div
+          id="status"
+          class="rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 min-h-[52px] flex items-center transition-colors duration-300"
+        >
+          Ready.
+        </div>
+      </div>
+
+      <!-- Lists -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <section>
+          <h2 class="text-xl font-semibold mb-3">Session Notes</h2>
+          <p id="sessionText" class="text-sm text-slate-500 mb-3">
+            Temporary notes for this browser session
+          </p>
+          <ul id="sessionList" class="space-y-2"></ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold mb-3">Local Notes</h2>
+          <p id="localText" class="text-sm text-slate-500 mb-3">
+            Saved notes that stay after reload and restart
+          </p>
+          <ul id="localList" class="space-y-2"></ul>
+        </section>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
