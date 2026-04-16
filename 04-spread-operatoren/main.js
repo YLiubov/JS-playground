@@ -1,3 +1,7 @@
+// =========================
+// PART 1 - SPREAD WITH ARRAYS
+// =========================
+
 // Task 1: Add numbers to a new array
 const numbers = [1, 2, 3];
 
